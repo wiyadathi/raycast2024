@@ -13,8 +13,9 @@ public class CubeRaycast : MonoBehaviour
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out RaycastHit hitInfo, 30f))
         {
             Debug.Log($"Hit2 {hitInfo.collider.gameObject.tag}");
-            if (hitInfo.collider.tag == "Enemy")
+            if (hitInfo.collider.tag == "Star")
             {
+                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward * 20), Color.red);
                 hitInfo.collider.gameObject.GetComponent<Renderer>().material.color = Color.red;
                 hitInfo.collider.gameObject.GetComponent<Rigidbody>().useGravity = true;
             }

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1812669056996983938}
   m_Layer: 0
   m_Name: Eye
-  m_TagString: Untagged
+  m_TagString: Character
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 8584559364317457821}
   m_Layer: 0
   m_Name: Body
-  m_TagString: Untagged
+  m_TagString: Character
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -223,7 +223,7 @@ GameObject:
   - component: {fileID: 5039968640278874208}
   m_Layer: 0
   m_Name: Character
-  m_TagString: Untagged
+  m_TagString: Character
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

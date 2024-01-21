@@ -31,7 +31,7 @@ public class CharacterMovement : MonoBehaviour
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref rotationSpeed, 0.1f);
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
         }
-*/
+        */
         // Move the character in the calculated direction
         characterController.Move(movement * speed * Time.deltaTime);
     }

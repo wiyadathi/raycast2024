@@ -9,11 +9,15 @@ public class ShootRaycast : MonoBehaviour
 
     void Update()
     {
+        Debug.DrawRay(shootPoint.transform.position, 
+            transform.forward * 20f, Color.green);
+        
         if (Physics.Raycast(shootPoint.transform.position, 
-            transform.TransformDirection(Vector3.forward),
-            out RaycastHit hitInfo, 20f, _layerMask))
+            transform.forward, out RaycastHit hitInfo, 
+            20f, _layerMask))
         {
             Debug.Log($"Hit {hitInfo.collider.gameObject.tag}!");
+            //alternative code for transform.forward
             Debug.DrawRay(shootPoint.transform.position, 
                           transform.TransformDirection(Vector3.forward) * hitInfo.distance, 
                           Color.red );
@@ -21,9 +25,8 @@ public class ShootRaycast : MonoBehaviour
         else
         {
             Debug.Log("hit nothing.");
-            Debug.DrawRay(shootPoint.transform.position, 
-                          transform.TransformDirection(Vector3.forward) * 20f, 
-                          Color.green);
         }
     }
 }
+
+
